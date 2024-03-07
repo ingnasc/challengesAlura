@@ -1,5 +1,5 @@
-# Programming Logic Activities :computer:
-Challenges done during the Logic of Programming classes of Alura. Some with the help of class, others alone.
+# Programming Logic Challenges :computer:
+Challenges done during the programming logic classes of Alura. Some with the help of class, others alone.
 <br/><br/>
 
 ### What I have learned:
