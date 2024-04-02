@@ -3,9 +3,20 @@ limpar();
 
 function adicionar() {
     let produto = document.getElementById('produto').value;
+    let quantidade = document.getElementById('quantidade').value;
+
+    if(!produto || produto.trim() === ""){
+        alert('Selecione um produto válido.');
+        return;
+    }
+
+    if(isNaN(quantidade) || quantidade <=0) {
+        alert('Insira uma quantidade válida.');
+        return;
+    }
+
     let nomeProduto = produto.split('-')[0];
     let valorUnitario = produto.split('R$')[1];
-    let quantidade = document.getElementById('quantidade').value;
     let subtotal = quantidade * valorUnitario;
 
     let listaCarrinho = document.getElementById('lista-produtos');
