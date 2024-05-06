@@ -2,11 +2,17 @@ let listaArray = [];
 
 function adicionar() {
     let nomeAmigo = document.getElementById('nome-amigo');
+
+    if(nomeAmigo.value == '') {
+        alert('Informe o nome do amigo!');
+        return; //vai parar e voltar para o inicio da função
+    }
+
     let listaAmigos = document.getElementById('lista-amigos');
     listaArray.push(nomeAmigo.value);
     
     if(listaAmigos.textContent == '') {
-        listaAmigos.textContent = nomeAmigo.value;
+       listaAmigos.textContent = nomeAmigo.value;
     } else {
         listaAmigos.textContent = listaAmigos.textContent + ', ' + nomeAmigo.value;
     }
@@ -40,6 +46,7 @@ function embaralha(lista) {
             [lista[indiceAleatorio], lista[indice - 1]];
     }
 }
+
 
 function reiniciar() {
     listaArray = [];
