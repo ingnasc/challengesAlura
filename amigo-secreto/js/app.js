@@ -8,6 +8,11 @@ function adicionar() {
         return; //vai parar e voltar para o inicio da função
     }
 
+    if(listaArray.includes(nomeAmigo.value)) {
+        alert('Nome já adicionado!');
+        return; 
+    }
+
     let listaAmigos = document.getElementById('lista-amigos');
     listaArray.push(nomeAmigo.value);
     
